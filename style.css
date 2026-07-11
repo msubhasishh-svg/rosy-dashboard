@@ -1,1 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    background:#0d1117;
+    color:#ffffff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.header{
+    background:#161b22;
+    border-bottom:1px solid #30363d;
+    padding:20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header h1{
+    color:#58a6ff;
+    font-size:32px;
+    letter-spacing:2px;
+}
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+.card{
+
+    background:#161b22;
+
+    border:1px solid #30363d;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    min-height:250px;
+
+    transition:.3s;
+
+    box-shadow:0 0 0 rgba(0,0,0,0);
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#58a6ff;
+
+    box-shadow:0 0 18px rgba(88,166,255,.25);
+
+}
+
+.card h2{
+
+    color:#58a6ff;
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+.chart{
+
+    grid-column:1 / span 2;
+
+    min-height:700px;
+
+}
+
+.ticker{
+
+    grid-column:1 / span 2;
+
+    min-height:120px;
+
+}
+
+.watchlist{
+
+    min-height:500px;
+
+}
+
+.overview{
+
+    min-height:500px;
+
+}
+
+.news{
+
+    min-height:450px;
+
+}
+
+.calendar{
+
+    min-height:450px;
+
+}
+
+#ticker-widget,
+#chart-widget,
+#watchlist-widget,
+#overview-widget,
+#news-widget,
+#calendar-widget{
+
+    width:100%;
+    height:100%;
+
+}
+
+@media(max-width:900px){
+
+.dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+.chart{
+
+grid-column:auto;
+
+}
+
+.ticker{
+
+grid-column:auto;
+
+}
+
+}
