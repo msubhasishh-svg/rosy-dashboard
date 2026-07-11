@@ -1,106 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>ROSY TERMINAL</title>
+<meta charset="UTF-8">
 
-  <link rel="stylesheet" href="style.css">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>🌌 ROSY TERMINAL</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header>
-    <h1>🌌 ROSY TERMINAL</h1>
+
+<h1>🌌 ROSY TERMINAL</h1>
+
+<p>
+Institutional Trading Workspace
+</p>
+
 </header>
+
 
 <main class="dashboard">
 
-    <!-- Ticker Tape -->
-    <section class="card">
-        <h2>📊 Live Ticker Tape</h2>
 
-        <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
+<!-- ========================= -->
+<!-- Ticker Tape -->
+<!-- ========================= -->
 
-            <script
-                type="text/javascript"
-                src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
-                async>
+<section class="card">
+
+<h2>📊 Live Markets</h2>
+
+<div class="tradingview-widget-container">
+
+<div class="tradingview-widget-container__widget"></div>
+
+<script
+type="text/javascript"
+src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+async>
+
 {
 "symbols":[
-{"proName":"NSE:NIFTY","title":"NIFTY 50"},
-{"proName":"OANDA:XAUUSD","title":"Gold"},
-{"proName":"COMEX:GC1!","title":"COMEX Gold"},
-{"proName":"OANDA:XAGUSD","title":"Silver"},
-{"proName":"TVC:USOIL","title":"Crude Oil"},
-{"proName":"BINANCE:BTCUSDT","title":"Bitcoin"}
-],
-"showSymbolLogo":true,
-"isTransparent":true,
-"displayMode":"adaptive",
-"colorTheme":"dark",
-"locale":"en"
+
+{
+"proName":"NSE:NIFTY",
+"title":"NIFTY 50"
+},
+
+{
+"proName":"OANDA:XAUUSD",
+"title":"XAUUSD"
+},
+
+{
+"proName":"COMEX:GC1!",
+"title":"COMEX Gold"
+},
+
+{
+"proName":"OANDA:XAGUSD",
+"title":"Silver"
+},
+
+{
+"proName":"TVC:USOIL",
+"title":"Crude Oil"
+},
+
+{
+"proName":"BINANCE:BTCUSDT",
+"title":"BTCUSD"
 }
-            </script>
 
-        </div>
-    </section>
+],
 
-    <!-- Trading Chart -->
+"showSymbolLogo":true,
 
-    <section class="card large-card">
+"isTransparent":true,
 
-        <h2>📈 Advanced Trading Chart</h2>
+"displayMode":"adaptive",
 
-        <div id="tv-chart" style="height:700px;"></div>
+"colorTheme":"dark",
 
-    </section>
+"locale":"en"
 
-    <!-- Watchlist -->
+}
 
-    <section class="card">
+</script>
 
-        <h2>⭐ Watchlist</h2>
+</div>
 
-        <div id="tv-watchlist" style="height:600px;"></div>
+</section>
 
-    </section>
 
-    <!-- Market Overview -->
+<!-- ========================= -->
+<!-- Advanced Chart -->
+<!-- ========================= -->
 
-    <section class="card">
+<section class="card large-card">
 
-        <h2>🌍 Market Overview</h2>
+<h2>📈 Trading Chart</h2>
 
-        <div id="tv-market-overview" style="height:600px;"></div>
+<div id="tv-chart"></div>
 
-    </section>
-
-    <!-- News -->
-
-    <section class="card">
-
-        <h2>📰 Market News</h2>
-
-        <div id="tv-news" style="height:650px;"></div>
-
-    </section>
-
-    <!-- Economic Calendar -->
-
-    <section class="card">
-
-        <h2>📅 Economic Calendar</h2>
-
-        <div id="tv-calendar" style="height:650px;"></div>
-
-    </section>
-
-</main>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+</section>
