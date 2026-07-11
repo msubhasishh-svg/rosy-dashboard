@@ -5,33 +5,60 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<title>🌌 ROSY TERMINAL</title>
+<title>🌌 ROSY TERMINAL Ω</title>
 
-<link rel="stylesheet" href="style.css">
+<link
+rel="stylesheet"
+href="style.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
-<h1>🌌 ROSY TERMINAL</h1>
+<div class="logo">
 
-<p>Institutional Trading Workspace</p>
+🌌 ROSY TERMINAL Ω
+
+</div>
+
+<div class="search">
+
+<input
+type="text"
+placeholder="Search Symbol...">
+
+</div>
+
+<div class="header-right">
+
+<button>🔔</button>
+
+<button>🌙</button>
+
+<button>👤</button>
+
+</div>
 
 </header>
 
-<main class="dashboard">
 
-<!-- ============================ -->
-<!-- LIVE TICKER TAPE -->
-<!-- ============================ -->
+<!-- ===================== -->
+<!-- TICKER -->
+<!-- ===================== -->
 
 <section class="card">
 
-<h2>📊 Live Markets</h2>
+<h2>
+
+📊 LIVE MARKETS
+
+</h2>
 
 <div class="tradingview-widget-container">
 
@@ -43,36 +70,55 @@ src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
 async>
 
 {
+
 "symbols":[
 
 {
+
 "proName":"OANDA:XAUUSD",
+
 "title":"Gold"
+
 },
 
 {
+
 "proName":"OANDA:XAGUSD",
+
 "title":"Silver"
+
 },
 
 {
+
 "proName":"TVC:USOIL",
+
 "title":"Crude Oil"
+
 },
 
 {
+
 "proName":"BINANCE:BTCUSDT",
+
 "title":"Bitcoin"
+
 },
 
 {
+
 "proName":"FOREXCOM:SPXUSD",
+
 "title":"S&P 500"
+
 },
 
 {
+
 "proName":"NASDAQ:NDX",
-"title":"Nasdaq 100"
+
+"title":"Nasdaq"
+
 }
 
 ],
@@ -95,17 +141,49 @@ async>
 
 </section>
 
-<!-- ============================ -->
+
+<!-- ===================== -->
+<!-- MARKET SWITCHER -->
+<!-- ===================== -->
+
+<section class="market-switcher">
+
+<button>🥇 XAUUSD</button>
+
+<button>🏛 COMEX</button>
+
+<button>🥈 SILVER</button>
+
+<button>🛢 OIL</button>
+
+<button>₿ BTCUSD</button>
+
+<button>🇮🇳 NIFTY50</button>
+
+</section>
+
+
+<main class="dashboard">
+
+
+<!-- ===================== -->
 <!-- ADVANCED CHART -->
-<!-- ============================ -->
+<!-- ===================== -->
 
-<section class="card large-card">
+<section class="card chart-card">
 
-<h2>📈 Advanced Trading Chart</h2>
+<h2>
+
+📈 ADVANCED CHART
+
+</h2>
 
 <div class="tradingview-widget-container">
 
-<div class="tradingview-widget-container__widget"></div>
+<div
+class="tradingview-widget-container__widget">
+
+</div>
 
 <script
 type="text/javascript"
@@ -113,16 +191,27 @@ src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.j
 async>
 
 {
+
 "autosize":true,
+
 "symbol":"OANDA:XAUUSD",
+
 "interval":"15",
+
 "timezone":"Asia/Kolkata",
+
 "theme":"dark",
+
 "style":"1",
+
 "locale":"en",
+
 "allow_symbol_change":true,
+
 "calendar":false,
+
 "support_host":"https://www.tradingview.com"
+
 }
 
 </script>
@@ -130,13 +219,19 @@ async>
 </div>
 
 </section>
-<!-- ============================ -->
+  <!-- ===================== -->
+<!-- SECOND ROW -->
+<!-- ===================== -->
+
+<div class="dashboard-grid">
+
+<!-- ===================== -->
 <!-- WATCHLIST -->
-<!-- ============================ -->
+<!-- ===================== -->
 
 <section class="card">
 
-<h2>⭐ Watchlist</h2>
+<h2>⭐ WATCHLIST</h2>
 
 <div class="tradingview-widget-container">
 
@@ -148,41 +243,63 @@ src="https://s3.tradingview.com/external-embedding/embed-widget-watchlist.js"
 async>
 
 {
+
 "colorTheme":"dark",
+
 "locale":"en",
+
 "width":"100%",
-"height":"500",
+
+"height":"560",
 
 "symbols":[
 
 {
+
 "proName":"OANDA:XAUUSD",
+
 "title":"Gold"
+
 },
 
 {
+
 "proName":"COMEX:GC1!",
+
 "title":"COMEX Gold"
+
 },
 
 {
+
 "proName":"OANDA:XAGUSD",
+
 "title":"Silver"
+
 },
 
 {
+
 "proName":"TVC:USOIL",
+
 "title":"Crude Oil"
+
 },
 
 {
+
 "proName":"BINANCE:BTCUSDT",
+
 "title":"Bitcoin"
+
 },
 
 {
+
 "proName":"NSE:NIFTY",
+
 "title":"NIFTY 50"
+
 }
 
 ]
@@ -195,13 +312,14 @@ async>
 
 </section>
 
-<!-- ============================ -->
+
+<!-- ===================== -->
 <!-- MARKET OVERVIEW -->
-<!-- ============================ -->
+<!-- ===================== -->
 
 <section class="card">
 
-<h2>🌍 Market Overview</h2>
+<h2>🌍 MARKET OVERVIEW</h2>
 
 <div class="tradingview-widget-container">
 
@@ -213,6 +331,7 @@ src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.
 async>
 
 {
+
 "colorTheme":"dark",
 
 "dateRange":"12M",
@@ -223,7 +342,7 @@ async>
 
 "width":"100%",
 
-"height":"500",
+"height":"560",
 
 "tabs":[
 
@@ -234,28 +353,43 @@ async>
 "symbols":[
 
 {
+
 "s":"OANDA:XAUUSD",
+
 "d":"Gold"
+
 },
 
 {
+
 "s":"OANDA:XAGUSD",
+
 "d":"Silver"
+
 },
 
 {
+
 "s":"TVC:USOIL",
+
 "d":"Crude Oil"
+
 },
 
 {
+
 "s":"BINANCE:BTCUSDT",
+
 "d":"Bitcoin"
+
 },
 
 {
+
 "s":"FOREXCOM:SPXUSD",
+
 "d":"S&P 500"
+
 }
 
 ]
@@ -271,13 +405,21 @@ async>
 </div>
 
 </section>
-<!-- ============================ -->
+
+</div>
+  <!-- ===================== -->
+<!-- THIRD ROW -->
+<!-- ===================== -->
+
+<div class="dashboard-grid">
+
+<!-- ===================== -->
 <!-- MARKET NEWS -->
-<!-- ============================ -->
+<!-- ===================== -->
 
 <section class="card">
 
-<h2>📰 Market News</h2>
+<h2>📰 MARKET NEWS</h2>
 
 <div class="tradingview-widget-container">
 
@@ -289,14 +431,23 @@ src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js"
 async>
 
 {
+
 "feedMode":"market",
+
 "market":"forex",
-"colorTheme":"dark",
+
 "isTransparent":true,
+
 "displayMode":"regular",
+
 "width":"100%",
+
 "height":"550",
+
+"colorTheme":"dark",
+
 "locale":"en"
+
 }
 
 </script>
@@ -305,22 +456,28 @@ async>
 
 </section>
 
-<!-- ============================ -->
+
+<!-- ===================== -->
 <!-- ECONOMIC CALENDAR -->
-<!-- ============================ -->
+<!-- ===================== -->
 
 <section class="card">
 
-<h2>📅 Economic Calendar</h2>
+<h2>📅 ECONOMIC CALENDAR</h2>
 
-<div class="calendar-placeholder">
+<div class="calendar-card">
 
-<h3>Coming in Version 1.1 🚀</h3>
+<h3>Live Calendar Coming Soon</h3>
 
 <p>
 
-We'll integrate a professional live Economic Calendar
-covering:
+TradingView does not currently provide an embeddable Economic Calendar widget.
+
+</p>
+
+<p>
+
+ROSY v1.1 will integrate a professional calendar from:
 
 </p>
 
@@ -336,32 +493,81 @@ covering:
 
 <li>🇮🇳 INR Events</li>
 
-<li>⭐ High Impact Events</li>
+<li>⭐ High Impact</li>
 
-<li>📊 Medium Impact Events</li>
+<li>🟠 Medium Impact</li>
 
-<li>🟢 Low Impact Events</li>
+<li>🟢 Low Impact</li>
 
 </ul>
 
 </div>
 
 </section>
-  <!-- ============================ -->
+
+</div>
+
+
+<!-- ===================== -->
+<!-- ROSY PANEL -->
+<!-- ===================== -->
+
+<section class="card">
+
+<h2>🤖 ROSY Ω WORKSPACE</h2>
+
+<div class="rosy-panel">
+
+<div class="status">
+
+🟢 STATUS : ONLINE
+
+</div>
+
+<div class="grid">
+
+<div>Market Bias</div>
+
+<div>Entry Zone</div>
+
+<div>Risk Reward</div>
+
+<div>POI</div>
+
+<div>Liquidity</div>
+
+<div>Trade Journal</div>
+
+</div>
+
+<p>
+
+Future versions will integrate:
+
+LSF HUD • Market Intelligence • Trade Planner • Journal • Statistics
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ===================== -->
 <!-- FOOTER -->
-<!-- ============================ -->
+<!-- ===================== -->
 
 <footer>
 
 <p>
 
-🌌 ROSY TERMINAL v1.0
+🌌 ROSY TERMINAL Ω
 
 </p>
 
 <p>
 
-Built with ❤️ using TradingView Widgets
+Institutional Trading Workspace
 
 </p>
 
@@ -374,3 +580,4 @@ Built with ❤️ using TradingView Widgets
 </body>
 
 </html>
+  
