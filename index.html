@@ -1,51 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>ROSY Dashboard</title>
+  <title>ROSY TERMINAL</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="header">
-    <h1>🌌 ROSY DASHBOARD</h1>
+<header>
+    <h1>🌌 ROSY TERMINAL</h1>
 </header>
 
 <main class="dashboard">
 
-    <section class="card ticker">
+    <!-- Ticker Tape -->
+    <section class="card">
         <h2>📊 Live Ticker Tape</h2>
-        <div id="ticker-widget"></div>
+
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+
+            <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+                async>
+{
+"symbols":[
+{"proName":"NSE:NIFTY","title":"NIFTY 50"},
+{"proName":"OANDA:XAUUSD","title":"Gold"},
+{"proName":"COMEX:GC1!","title":"COMEX Gold"},
+{"proName":"OANDA:XAGUSD","title":"Silver"},
+{"proName":"TVC:USOIL","title":"Crude Oil"},
+{"proName":"BINANCE:BTCUSDT","title":"Bitcoin"}
+],
+"showSymbolLogo":true,
+"isTransparent":true,
+"displayMode":"adaptive",
+"colorTheme":"dark",
+"locale":"en"
+}
+            </script>
+
+        </div>
     </section>
 
-    <section class="card chart">
-        <h2>📈 TradingView Chart</h2>
-        <div id="chart-widget"></div>
+    <!-- Trading Chart -->
+
+    <section class="card large-card">
+
+        <h2>📈 Advanced Trading Chart</h2>
+
+        <div id="tv-chart" style="height:700px;"></div>
+
     </section>
 
-    <section class="card watchlist">
+    <!-- Watchlist -->
+
+    <section class="card">
+
         <h2>⭐ Watchlist</h2>
-        <div id="watchlist-widget"></div>
+
+        <div id="tv-watchlist" style="height:600px;"></div>
+
     </section>
 
-    <section class="card overview">
+    <!-- Market Overview -->
+
+    <section class="card">
+
         <h2>🌍 Market Overview</h2>
-        <div id="overview-widget"></div>
+
+        <div id="tv-market-overview" style="height:600px;"></div>
+
     </section>
 
-    <section class="card news">
-        <h2>📰 News</h2>
-        <div id="news-widget"></div>
+    <!-- News -->
+
+    <section class="card">
+
+        <h2>📰 Market News</h2>
+
+        <div id="tv-news" style="height:650px;"></div>
+
     </section>
 
-    <section class="card calendar">
+    <!-- Economic Calendar -->
+
+    <section class="card">
+
         <h2>📅 Economic Calendar</h2>
-        <div id="calendar-widget"></div>
+
+        <div id="tv-calendar" style="height:650px;"></div>
+
     </section>
 
 </main>
